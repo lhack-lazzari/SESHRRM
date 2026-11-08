@@ -2,8 +2,9 @@
 
 **Spatially Explicit Sequoiadendron Hydro-Refugia and Recruitment Model**
 
-SESHRRM aims to 
+An exploratory model that attempts to test whether slope-forced surface hydrological routing is related to distribution of large giant sequoia stems at grove scale, and how such relationship interacts with juvenile recruitment.
 
+The project maps 1,059 stems taller than 70 m from airborne LiDAR within a steep (>20°) study area along the boundaries of Whitaker's Forest, Kings Canyon National Park and Sequoia National Forest, CA. (work in progress, no field validation).
 
 |Script|Function|
 |---|---|
@@ -15,3 +16,24 @@ SESHRRM aims to
 |`06_figure_creation.R`|whole site, sub-sites, growth curve|
 
 
+## Package Dependencies
+
+Requires:
+
+- library(sf)
+- library(terra)
+- library(whitebox)
+- library(tmap)
+- library(ggplot2)
+- library(ggnewscale)
+- library(ggspatial)
+- library(tidyverse)
+- library(lidR)
+- library(dplyr)
+- library(burnr)
+
+```R
+install.packages(c(sf, terra, whitebox, tmap, ggplot2, ggnewscale, ggspatial, tidyverse, lidR, dplyr, burnr))
+```
+
+The C++ backend for `whitebox` must be initialised before running scripts.
